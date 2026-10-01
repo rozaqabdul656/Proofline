@@ -1,0 +1,6 @@
+export type Status='passed'|'needs-review'|'failed'|'blocked'; export type CriterionStatus='passed'|'failed'|'unverified'|'not-applicable';
+export interface Criterion {id:string;text:string;status?:CriterionStatus;evidence?:string[]}
+export interface Task {run?:{id?:string;adapter?:string;agent?:string;startedAt?:string};task:{title:string;description?:string;acceptanceCriteria:(string|Criterion)[]};workspace:{path:string;baseRevision?:string}}
+export interface Policy {id?:string;version?:number;allowedPaths?:string[];scopeBlocking?:boolean;commands?:{name:string;argv:string[];timeoutMs?:number;maxOutput?:number}[];requiredCommands?:string[]}
+export interface CommandResult {name:string;argv:string[];status:'passed'|'failed'|'blocked'|'skipped';exitCode?:number;stdout?:string;stderr?:string;reason?:string;durationMs?:number}
+export interface Evidence {schemaVersion:'0.1';runId:string;timestamp:string;adapter:string;status:Status;task:{title:string;criteria:Criterion[]};validation:CommandResult[];scope:{files:string[];dependencyChanges:string[];assessment:'in-scope'|'review-needed'|'out-of-scope'};risks:string[];gaps:string[];artifacts:string[];improvements:{category:string;detail:string}[]}

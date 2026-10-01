@@ -1,0 +1,9 @@
+id: default
+version: 1
+allowedPaths: [src, examples]
+commands:
+  - name: node-version
+    argv: [node, --version]
+    timeoutMs: 5000
+    maxOutput: 1000
+requiredCommands: [node-version]

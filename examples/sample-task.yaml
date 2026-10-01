@@ -1,0 +1,12 @@
+run:
+  id: sample-001
+  adapter: generic
+  agent: sample
+task:
+  title: Sample proof
+  description: Demonstrate DoneProof
+  acceptanceCriteria:
+    - Validation command runs
+    - Evidence is written
+workspace:
+  path: .

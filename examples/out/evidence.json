@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "0.1",
+  "runId": "sample-001",
+  "timestamp": "2026-10-01T17:33:26.176Z",
+  "adapter": "generic",
+  "status": "needs-review",
+  "task": {
+    "title": "Sample proof",
+    "criteria": [
+      {
+        "id": "AC-1",
+        "text": "Validation command runs",
+        "status": "unverified"
+      },
+      {
+        "id": "AC-2",
+        "text": "Evidence is written",
+        "status": "unverified"
+      }
+    ]
+  },
+  "validation": [
+    {
+      "name": "node-version",
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "status": "passed",
+      "stdout": "v26.5.1\n",
+      "stderr": "",
+      "exitCode": 0,
+      "durationMs": 19
+    }
+  ],
+  "scope": {
+    "files": [
+      ".github/",
+      ".gitignore",
+      ".npmrc",
+      "CHANGELOG.md",
+      "LICENSE",
+      "README.md",
+      "SECURITY.md",
+      "examples/",
+      "package-lock.json",
+      "package.json",
+      "policies/",
+      "src/",
+      "tsconfig.json"
+    ],
+    "dependencyChanges": [
+      "package-lock.json",
+      "package.json"
+    ],
+    "assessment": "review-needed"
+  },
+  "risks": [
+    "dependency change requires review"
+  ],
+  "gaps": [
+    "AC-1",
+    "AC-2"
+  ],
+  "artifacts": [],
+  "improvements": []
+}
