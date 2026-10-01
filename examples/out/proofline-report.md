@@ -10,8 +10,8 @@
 - passed: node-version
 
 ## Scope
-- review-needed: 13 changed files
-- Dependencies: package-lock.json, package.json
+- in-scope: 4 changed files
+- Dependencies: none
 
 ## Gaps
 - AC-1

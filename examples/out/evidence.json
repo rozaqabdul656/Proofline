@@ -1,7 +1,7 @@
 {
   "schemaVersion": "0.1",
   "runId": "sample-001",
-  "timestamp": "2026-10-01T17:33:26.176Z",
+  "timestamp": "2026-10-01T17:34:40.259Z",
   "adapter": "generic",
   "status": "needs-review",
   "task": {
@@ -35,29 +35,15 @@
   ],
   "scope": {
     "files": [
-      ".github/",
-      ".gitignore",
-      ".npmrc",
-      "CHANGELOG.md",
-      "LICENSE",
-      "README.md",
-      "SECURITY.md",
-      "examples/",
-      "package-lock.json",
-      "package.json",
-      "policies/",
-      "src/",
-      "tsconfig.json"
+      "src/adapter-contract.ts",
+      ".github/ISSUE_TEMPLATE/adapter_request.md",
+      ".github/ISSUE_TEMPLATE/policy_request.md",
+      "docs/"
     ],
-    "dependencyChanges": [
-      "package-lock.json",
-      "package.json"
-    ],
-    "assessment": "review-needed"
+    "dependencyChanges": [],
+    "assessment": "in-scope"
   },
-  "risks": [
-    "dependency change requires review"
-  ],
+  "risks": [],
   "gaps": [
     "AC-1",
     "AC-2"
